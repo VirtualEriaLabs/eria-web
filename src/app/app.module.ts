@@ -1,12 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {CountDownComponent} from './count-down/count-down.component';
+import {LeftZeroPadPipe} from '../shared/pipe/left-zero-pad.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountDownComponent,
+    LeftZeroPadPipe
   ],
   imports: [
     BrowserModule,
@@ -15,4 +19,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
