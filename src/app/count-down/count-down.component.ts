@@ -10,7 +10,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   public subscription : Subscription | undefined;
   public now = new Date();
-  public targetDate = new Date(2022, 9, 30, 4, 30, 0);
+  public targetDate = new Date(Date.UTC(2022, 9, 30, 3, 30, 0));
   public timeDifference: number = 0;
 
   public secondsToTargetDate: number = 0;
