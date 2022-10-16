@@ -1,14 +1,59 @@
-.section-background
-  background: url("../../assets/images/bakcground-map.png") no-repeat center center fixed
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
+.wond-container
+  background: rgb(13 17 23)
+  width: 100vw
+  height: 100vh
+  overflow-x: hidden
   position: fixed
+  font-family: 'Roboto', sans-serif
+  color: #c5c5c5
+
+.wond-container header
+  position: fixed
+  z-index: 1000
+  width: 100%
+
+.wond-container .nav-header
+  background-color: #0e0e0e
+  height: 60px
+
+.nav-top
+  margin-left: 10px
+  position: -webkit-sticky
+  position: relative
   top: 0
-  left: 0
-  right: 0
-  bottom: 0
+  z-index: 1000
+  -webkit-font-smoothing: antialiased
+  display: flex
+  font-weight: bold
+
+.nav-top li
+  margin: auto
+
+.nav-top a
+  color: white
+  text-decoration: none
+  margin: auto
+
+.nav-top-logo
+  margin-top: auto
+  margin-bottom: auto
+
+.nav-top svg
+  display: block
+
+.nav-top ul:nth-child(4)
+  display: flex
+  list-style: none
+  gap: 30px
+
+.nav-top ul:nth-child(5)
+  margin-left: 2em
+  display: flex
+  list-style: none
+  gap: 15px
+
+.wonderland-halloween
+  background: url("../../assets/images/mapphoto.png") no-repeat center
 
 .center-screen
   display: flex
@@ -17,18 +62,142 @@
   text-align: center
   min-height: 100vh
 
-.logo_eria
-  position: fixed
-  bottom: 0
-  right: 64px
-  width: 64px
-  height: 64px
-  opacity: 0.5
+.wond-full-page-scrollable-container > *
+  min-height: 100vh
+  flex-basis: 100%
 
-.logo_wonderland
+.wond-def
+  background: url("../../assets/images/wonderland-winter.png") no-repeat center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  padding: 0 10vh 0 10vh
+  display: grid
+  place-items: center
+  align-content: center
+
+.wond-def h1
+  margin: 0
+  font-size: 8em
+
+.wond-def p
+  font-size: 1em
+
+.wond-past
+  display: flex
+  justify-content: center
+  width: 100vw
+  gap: 2em
+
+.wond-def > article
+  display: flex
+  flex-direction: row
+  padding: 80px
+  background: rgba(0, 0, 0, 0.31)
+  border-radius: 16px
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+  backdrop-filter: blur(8.1px)
+  -webkit-backdrop-filter: blur(8.1px)
+  border: 1px solid rgba(0, 0, 0, 0.6)
+  color: white
+
+.wond-def > article > div
+  display: flex
+  flex-direction: column
+  flex: 1
+
+.wond-def > article > div h1
+  display: block
+  font-size: 5vw
+
+.wond-def > article > div p
+  display: block
+  font-size: 1.5em
+
+.wond-def > article > div a
+  width: 120px
+  background-color: #bfbfbf
+  border-radius: 3px
+  text-align: center
+  padding: 15px
+  color: black
+  text-decoration: none
+
+.wond-def > article > div a:hover
+  background-color: #ffffff
+  transform: scale(1.1)
+
+.wond-def svg
+  display: block
+  flex: 1
+
+.nav-header-dropdown-menu
+  display: none
+
+.nav-top-mobile-menu
+  display: none
+
+label[for="nav-header-dropdown-menu"]
   position: fixed
-  bottom: 0
-  right: 0
-  width: 64px
-  height: 64px
-  opacity: 0.5
+  left: 100px
+  font-size: 3rem
+
+@media (max-width: 1200px)
+  .wond-def
+    padding: 0 2vh 0 2vh
+
+  .wond-def > article
+    flex-direction: column
+    padding: 40px
+    align-items: center
+
+  .wond-def > article > div
+    align-items: center
+
+  .wond-def > article > div h1
+    font-size: 10vw
+
+  .wond-def > article > div p
+    font-size: 1.2em
+
+  .wond-def svg
+    width: 40vw
+
+
+@media (max-width: 768px)
+  .nav-top-mobile-menu
+    display: block
+
+  .nav-header-dropdown-menu
+    display: none
+
+  .nav-top ul:nth-child(4)
+    width: 100%
+    height: 25vh
+    position: fixed
+    top: -100vh
+    right: 0
+    left: 0
+    bottom: 0
+    margin: 0
+    padding: 0
+    transition: top 1s
+    display: flex
+    flex-direction: column
+    list-style: none
+    gap: 5px
+    background: rgba(255, 255, 255, 0.75)
+    color: #171717
+
+  .nav-top ul:nth-child(4) a
+    color: rgb(21, 21, 21)
+    text-decoration: none
+    margin: auto
+    border-bottom: 1px solid #949494
+
+  .nav-header-dropdown-menu:checked ~ .wond-nav-options
+    top: 60px
+
+  .material-symbols-outlined
+    font-size: 32px
