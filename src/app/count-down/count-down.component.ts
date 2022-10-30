@@ -27,6 +27,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   timeDiff() {
     this.timeDifference = this.targetDate.getTime() - new Date().getTime();
+    console.log(this.timeDifference)
     this.allocateTimeUnits(this.timeDifference);
   }
 
